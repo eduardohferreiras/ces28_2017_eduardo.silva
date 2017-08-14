@@ -14,5 +14,11 @@ public class Currency {
 		this._currency = currency;
 	}
 	
+	public boolean equals(Currency currency) {
+		if(this.getCurrencyStr().equals(currency.getCurrencyStr()))
+			return true;
+		return false;
+	}
+	
 	private String _currency;
 }
