@@ -1,14 +1,6 @@
 package labnf;
 
-public class Cliente {
+public interface Cliente {
 	
-	Cliente(){
-		
-	}
-	
-	private int CPF;
-	
-	public int getCPF() {
-		return CPF;
-	}
+	public int getCPF();
 }

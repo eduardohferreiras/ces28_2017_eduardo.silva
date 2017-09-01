@@ -1,11 +1,7 @@
 package labnf;
 
-public class BDProd {
+public interface BDProd {
 
-	public static ItemInterface getProd(int iD) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
+	public  ItemInterface getProd(int iD);
 
 }
