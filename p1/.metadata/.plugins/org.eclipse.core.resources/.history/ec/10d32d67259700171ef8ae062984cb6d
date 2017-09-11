@@ -1,0 +1,57 @@
+package pub;
+
+import java.util.ArrayList;
+
+
+public class Menu {
+	
+	Menu()
+	{
+		populateIngredientList();
+	}
+	
+	private ArrayList<iBeverage> beverageList = new ArrayList<iBeverage>();
+	
+	public void addBeverage(String name, int price)
+	{
+		beverageList.add(new ReadyBeverage(name,price));
+	}
+	
+	public void addBeverage(String name, String[] ingredientList)
+	{
+		beverageList.add(new Drink(name, ingredientList,ingList));
+	}
+	
+	public int getBeverageListSize()
+	{
+		return beverageList.size();
+	}
+	
+	public String getBeverageName(int i)
+	{
+		return beverageList.get(i).getName();
+	}
+	
+	public int getBeveragePrice(int i)
+	{
+		return beverageList.get(i).getPrice();
+	}
+
+	private IngredientList ingList;
+	
+    private void populateIngredientList()
+    {
+    	ingList.addIngredient("rumUnit", 65);
+    	ingList.addIngredient("grenadineUnit", 10);
+    	ingList.addIngredient("limeJuiceUnit", 10);
+    	ingList.addIngredient("greenStuffUnit", 65);
+    	ingList.addIngredient("tonicWaterUnit", 20);
+    	ingList.addIngredient("ginUnit", 85);
+    	
+    }
+
+
+
+}
+
+

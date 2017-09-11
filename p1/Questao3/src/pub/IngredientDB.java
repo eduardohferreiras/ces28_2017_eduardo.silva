@@ -1,0 +1,31 @@
+package pub;
+
+import java.util.ArrayList;
+
+public class IngredientDB {
+	private ArrayList<Ingredient> ingredientList = new ArrayList<Ingredient>();
+	
+	public void addIngredient(String name, int price) {
+		ingredientList.add(new Ingredient(name,price));
+	}
+	
+	public void removeIngredient(int i)
+	{
+		ingredientList.remove(i);
+	}
+	
+	public int getIngListSize()
+	{
+		return ingredientList.size();
+	} 
+	
+	public String getIngName(int i)
+	{
+		return ingredientList.get(i).getName();
+	}
+	
+	public int getIngPrice(int i)
+	{
+		return ingredientList.get(i).getPrice();
+	}
+}

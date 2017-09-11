@@ -1,0 +1,33 @@
+package pub;
+
+import java.util.ArrayList;
+
+
+public class Menu {
+	private ArrayList<iBeverage> beverageList = new ArrayList<iBeverage>();
+	
+	public void addBeverage(String name, int price)
+	{
+		beverageList.add(new ReadyBeverage(name,price));
+	}
+	
+	public void addBeverage(String name, String[] ingredientList)
+	{
+		beverageList.add(new Drink(name, ingredientList));
+	}
+	
+	public int getBeverageListSize()
+	{
+		return beverageList.size();
+	}
+	
+	public String getBeverageName(int i)
+	{
+		return beverageList.get(i).getName();
+	}
+	
+	public int getBeveragePrice(int i)
+	{
+		return beverageList.get(i).getPrice();
+	}
+}

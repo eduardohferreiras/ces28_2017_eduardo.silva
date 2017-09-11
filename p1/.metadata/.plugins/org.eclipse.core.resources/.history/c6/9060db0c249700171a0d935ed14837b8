@@ -1,0 +1,42 @@
+package pub;
+
+import java.util.ArrayList;
+
+public class Drink implements iBeverage{
+	
+	private IngredientList ingBD;
+	private int price;
+	private String name;
+	private String[] ingList;
+
+	Drink(String name, String[] ingredientList, IngredientList ingDB){
+		this.name = name;
+		this.ingBD = ingDB;
+		this.ingList = ingredientList;
+		
+	}
+	
+	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getPrice() {
+		price = 0;
+    	for(int i = 0; i < ingList.length; i++)
+    	{
+    		for(int j = 0; j < this.ingDB.getIngName() ; j++)
+    		if(ingList[i] == ingBD.getBeverageName(i)) {
+    			price = ingBD.getBeveragePrice(i);
+    			find = true;
+    		}
+    	}
+	}
+	
+
+	
+}

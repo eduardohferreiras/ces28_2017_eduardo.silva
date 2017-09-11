@@ -1,0 +1,17 @@
+package pub;
+
+import java.util.HashSet;
+
+public class Menu {
+	private HashSet<iBeverage> beverageList = new HashSet<iBeverage>();
+	
+	public void addBeverage(String name, int price)
+	{
+		beverageList.add(new ReadyBeverage(name,price));
+	}
+	
+	public void addBeaverage(String name, String[] ingredientList)
+	{
+		beverageList.add(new Drink(name, ingredientList));
+	}
+}

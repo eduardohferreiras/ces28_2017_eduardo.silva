@@ -1,0 +1,25 @@
+package Q4;
+
+public class PainelCondutor {
+
+	public boolean imprimirAviso(String msg, int i) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public void diminuiVelocidadeTrem(double valor) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void aceleraVelocidadeTrem(double valor) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void aceleraVelocidadeTrem(double valor) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

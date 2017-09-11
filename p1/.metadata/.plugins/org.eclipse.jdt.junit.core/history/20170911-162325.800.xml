@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="PubPricesTest" project="Questao3" tests="11" started="11" failures="0" errors="0" ignored="0">
+  <testsuite name="pub.PubPricesTest" time="0.017">
+    <testcase name="testThatADrinkNotInTheSortimentGivesError" classname="pub.PubPricesTest" time="0.015"/>
+    <testcase name="testStudentsGetADiscountForBeer" classname="pub.PubPricesTest" time="0.0"/>
+    <testcase name="testCidersAreCostly" classname="pub.PubPricesTest" time="0.0"/>
+    <testcase name="testProperCidersAreEvenMoreExpensive" classname="pub.PubPricesTest" time="0.001"/>
+    <testcase name="testStudentsGetDiscountsWhenOrderingMoreThanOneBeer" classname="pub.PubPricesTest" time="0.0"/>
+    <testcase name="testACocktail" classname="pub.PubPricesTest" time="0.0"/>
+    <testcase name="testBacardiSpecial" classname="pub.PubPricesTest" time="0.0"/>
+    <testcase name="oneBeerTest" classname="pub.PubPricesTest" time="0.0"/>
+    <testcase name="testCanOrderMoreThanTwoBeers" classname="pub.PubPricesTest" time="0.0"/>
+    <testcase name="testCanBuyAtMostTwoDrinksInOneGo" classname="pub.PubPricesTest" time="0.001"/>
+    <testcase name="testStudentsDoNotGetDiscountsForCocktails" classname="pub.PubPricesTest" time="0.0"/>
+  </testsuite>
+</testrun>

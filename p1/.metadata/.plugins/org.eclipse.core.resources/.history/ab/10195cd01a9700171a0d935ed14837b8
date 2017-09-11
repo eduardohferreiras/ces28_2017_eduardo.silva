@@ -1,0 +1,13 @@
+package pub;
+
+import java.util.ArrayList;
+
+public class Drink implements iBeverage{
+	
+	public int getPrice()
+	{
+		return 0;
+	}
+	private ArrayList <Ingredient> ingredientList = new ArrayList <Ingredient>();
+	
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="testSuite" project="Questao4" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="Q4.testSuite" time="0.415">
+    <testcase name="testeParaQuandoOTremEstáNoCruzamentoAMaisDe100kmh" classname="Q4.testSuite" time="0.412"/>
+    <testcase name="testeParaQuandoOTremNãoSeEncontraEmCruzamento" classname="Q4.testSuite" time="0.003"/>
+    <testcase name="testeDeInicializaçãoDoControladorPTC" classname="Q4.testSuite" time="0.0"/>
+  </testsuite>
+</testrun>
