@@ -8,8 +8,6 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
-import lab02.CalculadoraString;
-
 
 public class unitTests {
 	private String input;
@@ -84,6 +82,35 @@ public class unitTests {
 		expectedExc.expect(IllegalArgumentException.class);
 		expectedExc.expectMessage("negativos proibidos [-58 -34 -14]");
 		CalculadoraString.add("//[*]\n1*,*-58,-34\n\n-14");
+	}
+	
+	
+	@Test
+	public void numbersBiggerThan1000areIgnored() {
+		input = "//[*]\n1*,*58,34\n\n1400";
+		assertEquals(93, CalculadoraString.add(input));
+		input = "2,1001";
+		assertEquals(2, CalculadoraString.add(input));
+	}
+	
+	@Test
+	public void testDelimitersWithAnySize() {
+		input = "//[***]\n1***2***3";
+		assertEquals(6, CalculadoraString.add(input));
+		input = "//[***]\n1***2,3\n4";
+		assertEquals(10, CalculadoraString.add(input));
+	}
+	
+	@Test
+	public void testMultipleDelimiters() { //ultimos dois itens
+		input = "//[*][%]\n1*2%3";
+		assertEquals(6, CalculadoraString.add(input));
+		input = "//[*][%]\n1*2%3\n4,5";
+		assertEquals(15, CalculadoraString.add(input));
+		input = "//[***][%%]\n1***2%%3";
+		assertEquals(6, CalculadoraString.add(input));
+		input = "//[***][%%]\n1***2%%3\n4,5";
+		assertEquals(15, CalculadoraString.add(input));
 	}
 	
 	//
