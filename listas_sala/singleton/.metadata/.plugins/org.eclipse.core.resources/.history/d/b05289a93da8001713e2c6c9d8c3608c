@@ -1,0 +1,36 @@
+
+public class tripletonApplication {
+
+	public static tripletonApplication instance = null;
+	private static boolean instanceFlag = false;
+	private static int counter = 0;
+	private static int maxcounter = 3;
+	
+	private tripletonApplication() {
+		
+	}
+	
+	public static synchronized tripletonApplication getInstance() throws InterruptedException {
+		if(counter < maxcounter)
+			return create();
+		else
+			throw new RuntimeException("Não é possivel criar mais instancias");
+	}
+	
+	private static tripletonApplication create() throws InterruptedException {
+		Thread.sleep(3000);
+		instance = new tripletonApplication();
+		instanceFlag = true;
+		return instance;
+		
+	}
+	
+	protected void finalize() throws Throwable{
+		try {
+			instanceFlag = false;
+		} finally {
+			super.finalize();
+		}
+	}
+	
+}

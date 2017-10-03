@@ -1,0 +1,11 @@
+
+public class MyThread extends Thread{
+	public void run(){
+		try {
+			Application.getInstance();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

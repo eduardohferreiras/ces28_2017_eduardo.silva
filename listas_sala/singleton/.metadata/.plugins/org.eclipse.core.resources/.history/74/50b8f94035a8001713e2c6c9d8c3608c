@@ -1,0 +1,36 @@
+
+public class Application {
+
+	public static Application instance = null;
+	private static boolean instanceFlag = false;
+	private static int counter = 0;
+	private static int maxcounter = 3;
+	
+	private Application() {
+		
+	}
+	
+	public static synchronized Application getInstance() {
+		if(!instanceFlag)
+			return create();
+		else
+			return instance;
+	}
+	
+	private static Application create() throws InterruptedException {
+		Thread.sleep(3000);
+		instance = new Application();
+		instanceFlag = true;
+		return instance;
+		
+	}
+	
+	protected void finalize() throws Throwable{
+		try {
+			instanceFlag = false;
+		} finally {
+			super.finalize();
+		}
+	}
+	
+}

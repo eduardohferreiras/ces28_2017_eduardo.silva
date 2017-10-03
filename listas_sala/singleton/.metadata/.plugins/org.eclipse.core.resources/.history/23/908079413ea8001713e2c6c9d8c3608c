@@ -1,0 +1,46 @@
+import java.util.ArrayList;
+
+public class tripletonApplication {
+
+	
+	private static ArrayList<tripletonApplication> instanceList = new ArrayList<tripletonApplication>();
+	
+	private static int maxcounter = 3;
+	
+	public void initializePool()
+	{
+		tripletonApplication instance1 = new tripletonApplication();
+		instanceList.add(instance1);
+		tripletonApplication instance2 = new tripletonApplication();
+		instanceList.add(instance2);
+	}
+	
+	private tripletonApplication() {
+		
+	}
+	
+	public static synchronized tripletonApplication getInstance() throws InterruptedException {
+		if(instanceList.size() < maxcounter)
+		{
+			return create();
+		}
+		else
+			throw new RuntimeException("Não é possivel criar mais instancias");
+	}
+	
+	private static tripletonApplication create() throws InterruptedException {
+		Thread.sleep(3000);
+		tripletonApplication instance = new tripletonApplication();
+		instanceList.add(instance);
+		return instance;
+	}
+	
+	protected void finalizeInstance(tripletonApplication instance) throws Throwable{
+		try {
+			instanceList.remove(instance);
+		} finally {
+			super.finalize();
+		}
+	}
+	
+}

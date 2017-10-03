@@ -1,0 +1,17 @@
+
+public class MyThread extends Thread{
+	Application myApp;
+	
+	public void run(){
+		try {
+			myApp = Application.getInstance();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public Application getApp() {
+		return myApp;
+	}
+}
