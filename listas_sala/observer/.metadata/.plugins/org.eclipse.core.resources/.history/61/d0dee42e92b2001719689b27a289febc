@@ -1,0 +1,22 @@
+package exec11;
+
+import java.util.ArrayList;
+
+public class Usuario extends Subject{
+	
+	private String estado;
+	
+	Usuario()
+	{
+		observers = new ArrayList<Observers>();
+	}
+
+	public void setState(String message ) {
+		System.out.println("Gerar evento \n---------------------- \n");
+		estado = message;
+	}
+	
+	public String getState() {
+		return estado;
+	}
+}

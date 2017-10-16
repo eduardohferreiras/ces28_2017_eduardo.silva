@@ -1,0 +1,17 @@
+package exec17;
+
+public class Subject {
+
+	private PublishSubscriber pubSub_;
+	
+	public void setPubSub(PublishSubscriber pubSub)
+	{
+		pubSub_ = pubSub;
+	}
+	
+	public void setValue(String msg) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

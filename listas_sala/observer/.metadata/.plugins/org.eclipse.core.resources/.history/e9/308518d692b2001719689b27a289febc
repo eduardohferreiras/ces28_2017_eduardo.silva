@@ -1,0 +1,28 @@
+package exec12;
+
+
+import java.util.Observable;
+
+import exec11.Observers;
+
+public class Usuario extends Observable{
+	
+	private String estado;
+
+	public void setState(String message ) {
+		System.out.println("Gerar evento \n---------------------- \n");
+		estado = message;
+	}
+	
+	public String getState() {
+		return estado;
+	}
+	
+	public void attach(Observers obj) {
+		observers.add(obj);
+	}
+	
+	public void dettach(Observers obj) {
+		observers.remove(obj);
+	}
+}

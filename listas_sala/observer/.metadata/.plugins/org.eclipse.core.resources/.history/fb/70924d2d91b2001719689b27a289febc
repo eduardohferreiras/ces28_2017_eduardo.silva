@@ -1,0 +1,14 @@
+package exec11;
+
+public class Usuario extends Subject{
+	
+	private String estado;
+	
+	public void setState(String message ) {
+		estado = message;
+	}
+	
+	public String getState() {
+		return estado;
+	}
+}

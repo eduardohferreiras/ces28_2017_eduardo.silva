@@ -1,0 +1,13 @@
+package exec11;
+
+public class MainClass {
+	
+	public static void main	(String [] args)
+	{
+		Usuario user_ = new Usuario();
+		UserInterface UI1 = new UserInterface(user_);
+		user_.attach(UI1);
+		
+	}
+
+}

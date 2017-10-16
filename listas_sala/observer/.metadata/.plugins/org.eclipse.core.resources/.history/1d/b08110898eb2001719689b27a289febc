@@ -1,0 +1,16 @@
+package exec11;
+
+import java.util.ArrayList;
+
+public class Usuario extends Subject{
+	
+	private String estado;
+	
+	public void setState(String message ) {
+		estado = message;
+	}
+	
+	public String getState() {
+		return estado;
+	}
+}

@@ -1,0 +1,20 @@
+package exec12;
+
+
+import java.util.Observable;
+
+
+public class Usuario extends Observable{
+	
+	private String estado;
+
+	public void setState(String message ) {
+		System.out.println("Gerar evento \n---------------------- \n");
+		estado = message;
+	}
+	
+	public String getState() {
+		return estado;
+	}
+	
+}

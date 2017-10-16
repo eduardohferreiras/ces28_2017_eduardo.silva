@@ -1,0 +1,10 @@
+package exec17;
+
+public class Subject {
+
+	public void setValue() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

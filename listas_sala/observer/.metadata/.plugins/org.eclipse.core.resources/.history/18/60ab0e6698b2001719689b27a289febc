@@ -1,0 +1,11 @@
+package exec17;
+
+public class Observer {
+	PublishSubscriber pubSub_;
+	public void setPubSub(PublishSubscriber pubSub)
+	{
+		pubSub_ = pubSub;
+	}
+	
+
+}
