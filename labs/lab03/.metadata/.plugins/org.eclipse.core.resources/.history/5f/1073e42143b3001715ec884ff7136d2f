@@ -1,0 +1,17 @@
+package exec01;
+
+public class LetterBuilder {
+
+	private absLetter letterType_;
+	
+	
+	LetterBuilder(absLetter letter)
+	{
+		letterType_ = letter;
+	}
+	
+	public String buildLetter()
+	{
+		return letterType_.model();
+	}
+}

@@ -1,0 +1,29 @@
+package exec03;
+
+public class EN_USComercialLetter extends ComercialLetter {
+	
+	EN_USComercialLetter(GenericPerson sender, GenericPerson destinatary, GenericAddress addressSender,
+			GenericAddress addressDestiny, GenericDate date, String idiom) {
+		super(sender, destinatary, addressSender, addressDestiny, date, idiom);
+	}
+
+	protected String header() {
+		return date_.toPrint() + "\n\n" + sender_.name() + "\n" +
+				addressSender_.toPrint() + "\n" + destinatary_.name() +"\n"+
+				addressDestiny_.toPrint() + "\n\n";
+	}
+	
+	protected String body() {
+			return "Dear " + destinatary_.name() + "\n" ;
+	}
+	
+	protected String conclusion() {
+			return "\nSincerely,\n";
+	}
+	
+	protected String signature() {
+			return "\n\n__________________\n" + sender_.name() + "\n" + sender_.phone().toPrint() +
+					"\nemail:" + sender_.email();
+	}
+
+}

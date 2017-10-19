@@ -1,0 +1,28 @@
+package exec01;
+
+public class LoveLetter extends absLetter{
+
+	LoveLetter(Person sender, Person destinatary, Address addressSender, Address addressDestiny, Date date) {
+		super(sender, destinatary, addressSender, addressDestiny, date);
+	}
+	
+	protected String header() {
+		return date_.toPrint() + "\n\n" + sender_.name() + "\n" + addressSender_.toPrint() + "\n\n" + destinatary_.name() + "\n"
+		+ addressDestiny_.toPrint()
+		+ "\n\n";
+	}
+	
+	protected String body() {
+			return "My lovely " + destinatary_.name() + ",\n" ;
+	}
+	
+	protected String conclusion() {
+			return "\nLove you!\n";
+	}
+	
+	protected String signature() {
+			return "\n\n___________________\n\n" + "Your lover, " + sender_.name() + ".";
+	}
+	
+
+}

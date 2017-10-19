@@ -1,0 +1,30 @@
+package exec01;
+
+//Usar uma classe date pronta ou usar uma do Java?
+
+class ComercialLetter extends absLetter { 
+	ComercialLetter(Person sender, Person destinatary, Address addressSender, Address addressDestiny, Date date ) {
+	// armazena todos os dados necessarios
+	}
+	
+	protected String header() {
+		return date_.toPrint() + "\n\n" + sender_.name() + "\n" +
+				addressSender_.toPrint() + "\n" + destinatary_.name() +
+				addressDestiny_.toPrint() + "\n";
+	}
+	
+	protected String body() {
+			return "Dear" + destinatary_.name() + "\n" ;
+	}
+	
+	protected String conclusion() {
+			return "\nSincerely,\n";
+	}
+	
+	protected String signature() {
+			return "\n\n __________________\n" + sender_.name() + "\n" + sender_.phone().toPrint() +
+					"\n email:" + sender_.email();
+			//espaços representam justificação à direita.keep it simple!
+	}
+	
+}

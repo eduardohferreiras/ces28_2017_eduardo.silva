@@ -1,0 +1,8 @@
+package exec02;
+
+public class EN_USDate extends Date {
+	public String toPrint()
+	{
+		
+	}
+}

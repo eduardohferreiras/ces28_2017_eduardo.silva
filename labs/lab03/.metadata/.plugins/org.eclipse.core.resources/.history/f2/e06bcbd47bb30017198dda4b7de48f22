@@ -1,0 +1,10 @@
+package exec02;
+
+public class EN_USPerson extends Person {
+
+	EN_USPerson(String name, Phone phone, String email, String gender) {
+		super(name, phone, email, gender);
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,6 @@
+package exec01;
+
+public class LoveLetter extends absLetter{
+	
+
+}

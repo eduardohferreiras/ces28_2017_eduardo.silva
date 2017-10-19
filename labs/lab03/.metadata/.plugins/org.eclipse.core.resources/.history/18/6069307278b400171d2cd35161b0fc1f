@@ -1,0 +1,11 @@
+package exec03;
+
+public class PT_BRReadersNote extends Letter {
+
+	public PT_BRReadersNote(GenericPerson sender, GenericPerson destinatary, GenericAddress addressSender,
+			GenericAddress addressDestiny, GenericDate date, String idiom) {
+		super(sender, destinatary, addressSender, addressDestiny, date, idiom);
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,39 @@
+package exec03;
+
+abstract class Letter {
+	
+	Letter(Person sender, Person destinatary, Address addressSender, Address addressDestiny, GenericDate date, String idiom)
+	{
+		sender_ = sender;
+		destinatary_ = destinatary;
+		addressSender_ = addressSender; 
+		addressDestiny_ = addressDestiny;
+		date_ = date.getSpecificDate(idiom);
+	}
+	
+	protected GenericDate date_;
+	protected Person sender_;
+	protected Person destinatary_;
+	protected Address addressSender_;
+	protected Address addressDestiny_;
+
+	public String model() {
+		return header() + body() + conclusion() + signature();
+	}
+	
+	protected String header() {
+		return null;	
+	}
+	
+	protected String body() {
+			return null;
+	}
+	
+	protected String conclusion() {
+			return null;
+	}
+	
+	protected String signature() {
+		return null;
+	}
+}

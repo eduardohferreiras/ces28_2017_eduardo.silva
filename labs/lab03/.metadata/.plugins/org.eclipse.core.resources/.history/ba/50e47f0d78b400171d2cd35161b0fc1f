@@ -1,0 +1,19 @@
+package exec03;
+
+public class LetterBuilder {
+
+	private Letter letterType_;
+	private Letter specificLanguageletter_;
+	
+	LetterBuilder(Letter letter, String idiom)
+	{
+		letterType_ = letter;
+		specificLanguageletter_ = letter.getSpecificLetter(idiom);
+		
+	}
+	
+	public String buildLetter()
+	{
+		return specificLanguageletter_.model();
+	}
+}

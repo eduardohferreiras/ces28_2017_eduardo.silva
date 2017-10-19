@@ -1,0 +1,87 @@
+package exec01;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class exec01Tests {
+
+	private Date date_;
+	private Person sender_;
+	private Phone senderPhone_;
+	private Person destinatary_;
+	private Phone destinataryPhone_;
+	private Address addressSender_;
+	private Address addressDestiny_;
+	private LetterBuilder builder_;
+	
+	
+	
+	@Before
+	public void setup() {
+		date_ = new Date(16,10,2017);
+		senderPhone_ = new Phone (34, 33333333);
+		destinataryPhone_ = new Phone (12, 999999999);
+		sender_ = new Person("José da Silva", senderPhone_, "zedasilva@gmail.com");
+		destinatary_ = new Person("Maria da Rosa", destinataryPhone_, "mariadarosa@outlook.com");
+		addressSender_ = new Address("Rua da Pedra", 12, "Uberaba", "Brasil", "38015-000");
+		addressDestiny_ = new Address("Alameda da Terra", 548, "São José dos Campos", "Brasil", "12228-000");
+		
+	}
+	
+	@Test
+	public void JoséSendsALoveLettlerToMaria() {
+		LoveLetter loveLetter_ = new LoveLetter(sender_, destinatary_,addressSender_, addressDestiny_ ,date_);
+		builder_ = new LetterBuilder(loveLetter_);
+		String generatedString = builder_.buildLetter();
+		String hardCodedString = "16/10/2017\n" + 
+				"\n" + 
+				"José da Silva\n" + 
+				"Rua da Pedra, 12, Uberaba, Brasil\n" + 
+				"38015-000\n" + 
+				"\n" + 
+				"Maria da Rosa\n" + 
+				"Alameda da Terra, 548, São José dos Campos, Brasil\n" + 
+				"12228-000\n" + 
+				"\n" + 
+				"My lovely Maria da Rosa,\n" + 
+				"\n" + 
+				"Love you!\n" + 
+				"\n" + 
+				"\n" + 
+				"___________________\n" + 
+				"\n" + 
+				"Your lover, José da Silva.\n\n";
+				
+		assertEquals(generatedString, hardCodedString);
+	}
+	
+	@Test
+	public void JoséSendsAComercialLettlerToMaria() {
+		ComercialLetter comercialLetter_ = new ComercialLetter(sender_, destinatary_,addressSender_, addressDestiny_ ,date_);
+		builder_ = new LetterBuilder(comercialLetter_);
+		String generatedString = builder_.buildLetter();
+		String hardCodedString = "16/10/2017\n" + 
+				"\n" + 
+				"José da Silva\n" + 
+				"Rua da Pedra, 12, Uberaba, Brasil\n" + 
+				"38015-000\n" + 
+				"Maria da RosaAlameda da Terra, 548, São José dos Campos, Brasil\n" + 
+				"12228-000\n" + 
+				"\n" + 
+				"Dear Maria da Rosa\n" + 
+				"\n" + 
+				"Sincerely,\n" + 
+				"\n" + 
+				"\n" + 
+				"__________________\n" + 
+				"José da Silva\n" + 
+				"(34) 33333333\n" + 
+				"email:zedasilva@gmail.com\n";
+		
+		
+		assertEquals(generatedString, hardCodedString);
+	}
+
+}

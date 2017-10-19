@@ -1,0 +1,17 @@
+package exec02;
+
+public class PersonFactory {
+	public Person makeDate(int day, int month, int year, String idiom)
+	{
+		if(idiom.equals("EN-US"))
+		{
+			return new EN_USPerson(day, month, year);
+		}
+		else if(idiom.equals("PT_BR"))
+		{
+			return new PT_BRPerson(day, month, year);
+		}
+		else return null;
+	}
+
+}

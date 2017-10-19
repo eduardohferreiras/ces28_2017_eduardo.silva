@@ -1,0 +1,17 @@
+package exec02;
+
+public class phoneFCT_ {
+	public Phone makePhone(String street, int number, String city, String country, String postalCode, String idiom)
+	{
+		if(idiom.equals("EN-US"))
+		{
+			return new EN_USPPhone(street, number, city, country, postalCode);
+		}
+		else if(idiom.equals("PT_BR"))
+		{
+			return new PT_BRPhone(street, number, city, country, postalCode);
+		}
+		else return null;
+	}
+
+}

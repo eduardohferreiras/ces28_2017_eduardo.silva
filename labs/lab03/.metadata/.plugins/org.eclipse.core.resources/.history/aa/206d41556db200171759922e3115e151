@@ -1,0 +1,20 @@
+package exec01;
+
+public class Person {
+
+	public String name() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Phone phone() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public String email() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

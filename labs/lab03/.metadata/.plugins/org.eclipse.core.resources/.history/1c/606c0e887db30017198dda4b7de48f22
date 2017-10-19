@@ -1,0 +1,16 @@
+package exec02;
+
+public class AddressFactory {
+	public Person makeAddress(String name, Phone phone, String email, String gender, String idiom)
+	{
+		if(idiom.equals("EN-US"))
+		{
+			return new EN_USPAddress(name,phone,email,gender);
+		}
+		else if(idiom.equals("PT_BR"))
+		{
+			return new PT_BRAddress(name,phone,email,gender);
+		}
+		else return null;
+	}
+}

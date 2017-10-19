@@ -1,0 +1,10 @@
+package exec01;
+
+public class Date {
+
+	public String toPrint() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

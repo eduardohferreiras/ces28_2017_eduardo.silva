@@ -1,0 +1,11 @@
+package exec02;
+
+public class DateFactory {
+	public Date makeDate(int day, int month, int year, String idiom)
+	{
+		if(idiom.equals("EN-US"))
+		{
+			return new EN_USDate()
+		}
+	}
+}

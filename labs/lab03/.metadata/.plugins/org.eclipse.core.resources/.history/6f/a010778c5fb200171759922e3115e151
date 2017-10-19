@@ -1,0 +1,40 @@
+package exec01;
+
+import java.sql.Date;
+
+
+class ComercialLetter { 
+	ComercialLetter(Person sender, Person destinatary, Address addressSender, Address addressDestiny, Date date ) {
+	// armazena todos os dados necessarios
+	}
+	public String model() {
+			return header() + body() + conclusion() + signature();
+	}
+	
+	protected String header() {
+		return date_.toPrint() + “\n\n” + sender_.name() + “\n” +
+				addressSender_.toPrint() + “\n” + destinatary_.name() +
+				addressDestiny_.toPrint() + “\n”;
+	}
+	
+	protected String body() {
+			return “Dear “+destinatary_.name() + “\n” ;
+	}
+	
+	protected String conclusion() {
+			return “\nSincerely,\n”;
+	}
+	
+	protected String signature() {
+			return “\n\n __________________\n
+					”+ sender_.name() + “\n ” + sender.phone().toPrint() +
+					“\n email:” + sender.email();
+			//espaços representam justificação à direita.keep it simple!
+	}
+	
+	private Date date_;
+	private Person sender_;
+	private Address addressSender_;
+	private Address addressDestiny_;
+	
+}//class Commercial Letter

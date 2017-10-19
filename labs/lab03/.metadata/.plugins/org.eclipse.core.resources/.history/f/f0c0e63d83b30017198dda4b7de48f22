@@ -1,0 +1,19 @@
+package exec02;
+
+public class Phone {
+
+	Phone(int areaCode, int number)
+	{
+		DDD_ = areaCode;
+		number_ = number;
+	}
+	
+	private int DDD_;
+	private int number_;
+	
+	public String toPrint() {
+		return "(" + DDD_ + ") " + number_;
+	}
+
+
+}

@@ -1,0 +1,14 @@
+package exec01;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class exec01Tests {
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

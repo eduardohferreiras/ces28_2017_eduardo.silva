@@ -1,0 +1,11 @@
+package exec01;
+
+abstract class absLetter {
+	
+	protected Date date_;
+	protected Person sender_;
+	protected Person destinatary_;
+	protected Address addressSender_;
+	protected Address addressDestiny_;
+
+}

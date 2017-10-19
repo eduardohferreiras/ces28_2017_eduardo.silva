@@ -1,0 +1,74 @@
+package exec03;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import exec02.Address;
+import exec02.AddressFactory;
+import exec02.Date;
+import exec02.DateFactory;
+import exec02.LetterBuilder;
+import exec02.LoveLetter;
+import exec02.Person;
+import exec02.PersonFactory;
+import exec02.Phone;
+import exec02.PhoneFactory;
+
+public class exec03Tests {
+
+	private GenericDate date_;
+	
+	private GenericPerson sender_;
+	private GenericPerson destinatary_;
+	
+
+	private GenericPhone senderPhone_;
+	private GenericPhone destinataryPhone_;
+	
+	private GenericAddress addressSender_;
+	private GenericAddress addressDestiny_;
+	
+	private LetterBuilder builder_;
+	
+	@Test
+	public void JoséSendsALoveLettlerToMariaWithFieldsinEnglish() {
+		String idiom = "EN_US";
+		date_ = new GenericDate(16,10,2017);
+		
+		senderPhone_ = new GenericPhone (34, 33333333);
+		destinataryPhone_ = new GenericPhone(12, 999999999);
+		sender_ = new GenericPerson("José da Silva", senderPhone_, "zedasilva@gmail.com", "M");
+		destinatary_ =  new GenericPerson("Maria da Rosa", destinataryPhone_, "mariadarosa@outlook.com","F");
+		
+		addressSender_ = new GenericAddress("Rua da Pedra", 12, "Uberaba", "Brasil", "38015-000");
+		addressDestiny_ = new GenericAddress("Alameda da Terra", 548, "São José dos Campos", "Brasil", "12228-000");
+		
+		
+		LoveLetter loveLetter_ = new LoveLetter(sender_, destinatary_,addressSender_, addressDestiny_ ,date_);
+		builder_ = new LetterBuilder(loveLetter_);
+		String generatedString = builder_.buildLetter();
+		
+		String hardCodedString = "10/16/2017\n" + 
+				"\n" + 
+				"Mr José da Silva\n" + 
+				"Rua da Pedra Street, Number 12, Uberaba, Brasil\n" + 
+				"38015-000\n" + 
+				"\n" + 
+				"Ms Maria da Rosa\n" + 
+				"Alameda da Terra Street, Number 548, São José dos Campos, Brasil\n" + 
+				"12228-000\n" + 
+				"\n" + 
+				"My lovely Ms Maria da Rosa,\n" + 
+				"\n" + 
+				"Love you!\n" + 
+				"\n" + 
+				"\n" + 
+				"___________________\n" + 
+				"\n" + 
+				"Your lover, Mr José da Silva."	;	
+		
+		assertEquals(generatedString, hardCodedString);
+	}
+
+}

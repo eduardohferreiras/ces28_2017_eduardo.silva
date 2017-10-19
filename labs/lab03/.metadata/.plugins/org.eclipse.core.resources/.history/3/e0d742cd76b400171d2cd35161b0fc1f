@@ -1,0 +1,5 @@
+package exec03;
+
+public class EN_USComercialLetter extends Letter {
+
+}

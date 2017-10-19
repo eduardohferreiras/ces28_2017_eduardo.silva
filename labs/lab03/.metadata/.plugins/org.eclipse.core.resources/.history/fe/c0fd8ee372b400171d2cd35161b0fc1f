@@ -1,0 +1,17 @@
+package exec03;
+
+public class PersonFactory {
+	public GenericPerson makePerson(String name, GenericPhone phone, String email, String gender, String idiom)
+	{
+		if(idiom.equals("EN_US"))
+		{
+			return new EN_USPerson(name,phone,email,gender);
+		}
+		else if(idiom.equals("PT_BR"))
+		{
+			return new PT_BRPerson(name,phone,email,gender);
+		}
+		else return null;
+	}
+
+}

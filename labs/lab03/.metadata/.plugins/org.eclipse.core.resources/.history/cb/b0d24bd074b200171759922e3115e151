@@ -1,0 +1,29 @@
+package exec01;
+
+public class Person {
+
+	Person(String name, Phone phone, String email )
+	{
+		name_ = name;
+		phone_ = phone;
+		email_ = email;
+	}
+	
+	private String name_;
+	private Phone phone_;
+	private String email_;
+	
+	
+	public String name() {
+		return name_;
+	}
+
+	public Phone phone() {
+		return phone_;
+	}
+
+	public String email() {
+		return email_;
+	}
+
+}

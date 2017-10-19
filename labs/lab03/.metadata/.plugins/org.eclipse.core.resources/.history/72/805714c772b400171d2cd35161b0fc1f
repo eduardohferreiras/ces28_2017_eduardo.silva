@@ -1,0 +1,43 @@
+package exec03;
+
+public abstract class Person {
+
+	Person(String name, GenericPhone phone, String email, String gender)
+	{
+		name_ = name;
+		phone_ = phone;
+		email_ = email;
+		gender_ = gender;
+	}
+	
+	protected String name_;
+	protected GenericPhone phone_;
+	protected String email_;
+	protected String gender_;
+	
+	public String name() {
+		return null;
+	}
+
+	public GenericPhone phone() {
+		return phone_;
+	}
+
+	public String email() {
+		return email_;
+	}
+
+	public Person getSpecificPerson(String idiom)
+	{
+		if(idiom.equals("EN_US"))
+		{
+			return new EN_USPerson(name,phone,email,gender);
+		}
+		else if(idiom.equals("PT_BR"))
+		{
+			return new PT_BRPerson(name,phone,email,gender);
+		}
+		else return null;
+	}
+	}
+}

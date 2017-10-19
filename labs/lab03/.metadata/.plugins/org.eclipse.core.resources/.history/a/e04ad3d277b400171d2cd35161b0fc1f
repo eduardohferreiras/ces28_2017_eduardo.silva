@@ -1,0 +1,34 @@
+package exec03;
+
+public class ComercialLetter extends Letter { 
+
+	ComercialLetter(GenericPerson sender, GenericPerson destinatary, GenericAddress addressSender, GenericAddress addressDestiny, GenericDate date, String idiom)
+	{
+		super(sender,destinatary, addressSender,addressDestiny, date, idiom);
+	}
+	
+	public Letter getSpecificLetter(String idiom) {
+		if(idiom.equals("EN_US"))
+			return new EN_USComercialLetter(this.sender_,this.destinatary_,this.addressSender_,this.addressDestiny_, this.date_, this.idiom_);
+	}
+	
+	protected String header() {
+		return date_.toPrint() + "\n\n" + sender_.name() + "\n" +
+				addressSender_.toPrint() + "\n" + destinatary_.name() +"\n"+
+				addressDestiny_.toPrint() + "\n\n";
+	}
+	
+	protected String body() {
+			return "Dear " + destinatary_.name() + "\n" ;
+	}
+	
+	protected String conclusion() {
+			return "\nSincerely,\n";
+	}
+	
+	protected String signature() {
+			return "\n\n__________________\n" + sender_.name() + "\n" + sender_.phone().toPrint() +
+					"\nemail:" + sender_.email();
+	}
+	
+}

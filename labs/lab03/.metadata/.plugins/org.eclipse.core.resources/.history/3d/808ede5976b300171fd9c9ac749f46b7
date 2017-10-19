@@ -1,0 +1,20 @@
+package exec02;
+
+public abstract class Date {
+
+	Date(int day, int month, int year)
+	{
+		day_ = day;
+		month_ = month;
+		year_ = year;	
+	}
+	
+	private int day_;
+	private int month_;
+	private int year_;
+	
+	public String toPrint() {
+		return null;
+	}
+
+}

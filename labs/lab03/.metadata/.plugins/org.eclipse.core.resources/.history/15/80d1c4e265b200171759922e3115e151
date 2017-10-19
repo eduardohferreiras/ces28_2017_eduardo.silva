@@ -1,0 +1,5 @@
+package exec01;
+
+abstract class absLetter {
+
+}
