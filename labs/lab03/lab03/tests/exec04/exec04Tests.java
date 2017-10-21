@@ -1,16 +1,19 @@
 package exec04;
 
+import static org.junit.Assert.*;
+
 import org.junit.Before;
+
 import org.junit.Test;
 
-import exec03.ComercialLetter;
-import exec03.GenericAddress;
-import exec03.GenericDate;
-import exec03.GenericPerson;
-import exec03.GenericPhone;
-import exec03.LetterBuilder;
-import exec03.LoveLetter;
-import exec03.ReadersNote;
+import exec04.ComercialLetter;
+import exec04.GenericAddress;
+import exec04.GenericDate;
+import exec04.GenericPerson;
+import exec04.GenericPhone;
+import exec04.LetterBuilder;
+import exec04.LoveLetter;
+import exec04.ReadersNote;
 
 public class exec04Tests {
 	private GenericDate date_;
@@ -43,31 +46,48 @@ public class exec04Tests {
 	
 	
 	@Test
-	public void JoseSendsALoveLettlerToMariainPortuguese() {
+	public void JoseSendsAComercialToMariainPortuguese() {
 		String idiom = "PT_BR";
 
-		LoveLetter loveLetter_ = new LoveLetter(sender_, destinatary_, addressSender_,addressDestiny_, date_,idiom);
-		builder_ = new LetterBuilder(loveLetter_, idiom);
+		ComercialLetter letter_ = new ComercialLetter(sender_, destinatary_, addressSender_,addressDestiny_, date_,idiom);
+		builder_ = new LetterBuilder(letter_, idiom);
 		String generatedString = builder_.buildLetter();
 		
-		String hardCodedString = "";	
+		String hardCodedString = "16/10/2017\n" + 
+				"\n" + 
+				"Sr Jos� da Silva\n" + 
+				"Rua da Pedra, N�mero 12, Uberaba, Brasil\n" + 
+				"38015-000\n" + 
+				"Sra Maria da Rosa\n" + 
+				"Alameda da Terra, N�mero 548, S�o Jos� dos Campos, Brasil\n" + 
+				"12228-000\n" + 
+				"\n" + 
+				"Prezado(a) Sra Maria da Rosa\n" + 
+				"\n" + 
+				"Atenciosamente,\n" + 
+				"\n" + 
+				"\n" + 
+				"__________________\n" + 
+				"Sr Jos� da Silva\n" + 
+				"DDD: 34 Number: 33333333\n" + 
+				"email:zedasilva@gmail.com";	
 		
-		//System.out.println(generatedString);
-		
-		//assertEquals(generatedString, hardCodedString);
+		assertEquals(generatedString, hardCodedString);
 	}
 	
 	@Test
-	public void JoseSendsALoveLettlerToMariainPortuguese2() {
+	public void JoseSendsAComercialToMariainPortuguese2() {
 		String idiom = "PT_BR";
-
-		LoveLetter loveLetter_ = new LoveLetter(sender_, destinatary_, addressSender_,addressDestiny_, date_,idiom);
-		builder_ = new LetterBuilder(loveLetter_, idiom);
+		sender_.changePhone(new PT_BRPhone2(34, 33333333));
+		ComercialLetter letter_ = new ComercialLetter(sender_, destinatary_, addressSender_,addressDestiny_, date_,idiom);
+		
+		builder_ = new LetterBuilder(letter_, idiom);
+		
 		String generatedString = builder_.buildLetter();
 		
 		String hardCodedString = "";	
 		
-		//System.out.println(generatedString);
+		System.out.println(generatedString);
 		
 		//assertEquals(generatedString, hardCodedString);
 	}

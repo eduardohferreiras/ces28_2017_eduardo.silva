@@ -44,11 +44,27 @@ public class exec03Tests {
 		builder_ = new LetterBuilder(loveLetter_, idiom);
 		String generatedString = builder_.buildLetter();
 		
-		String hardCodedString = "";	
+		String hardCodedString = "10/16/2017\n" + 
+				"\n" + 
+				"Mr Jos� da Silva\n" + 
+				"Rua da Pedra Street, Number 12, Uberaba, Brasil\n" + 
+				"38015-000\n" + 
+				"\n" + 
+				"Ms Maria da Rosa\n" + 
+				"Alameda da Terra Street, Number 548, S�o Jos� dos Campos, Brasil\n" + 
+				"12228-000\n" + 
+				"\n" + 
+				"My lovely Ms Maria da Rosa,\n" + 
+				"\n" + 
+				"Love you!\n" + 
+				"\n" + 
+				"\n" + 
+				"___________________\n" + 
+				"\n" + 
+				"Your lover, Mr Jos� da Silva.";	
 		
-		System.out.println(generatedString);
 		
-		//assertEquals(generatedString, hardCodedString);
+		assertEquals(generatedString, hardCodedString);
 	}
 	
 	@Test
@@ -59,11 +75,27 @@ public class exec03Tests {
 		builder_ = new LetterBuilder(loveLetter_, idiom);
 		String generatedString = builder_.buildLetter();
 		
-		String hardCodedString = "";	
+		String hardCodedString = "16/10/2017\n" + 
+				"\n" + 
+				"Sr Jos� da Silva\n" + 
+				"Rua da Pedra, N�mero 12, Uberaba, Brasil\n" + 
+				"38015-000\n" + 
+				"\n" + 
+				"Sra Maria da Rosa\n" + 
+				"Alameda da Terra, N�mero 548, S�o Jos� dos Campos, Brasil\n" + 
+				"12228-000\n" + 
+				"\n" + 
+				"Querido(a) Sra Maria da Rosa,\n" + 
+				"\n" + 
+				"Te amo!\n" + 
+				"\n" + 
+				"\n" + 
+				"___________________\n" + 
+				"\n" + 
+				"Seu amado(a), Sr Jos� da Silva.";	
 		
-		//System.out.println(generatedString);
 		
-		//assertEquals(generatedString, hardCodedString);
+		assertEquals(generatedString, hardCodedString);
 	}
 	
 	@Test
@@ -74,11 +106,27 @@ public class exec03Tests {
 		builder_ = new LetterBuilder(comercialLetter_, idiom);
 		String generatedString = builder_.buildLetter();
 		
-		String hardCodedString = "";	
+		String hardCodedString = "10/16/2017\n" + 
+				"\n" + 
+				"Mr Jos� da Silva\n" + 
+				"Rua da Pedra Street, Number 12, Uberaba, Brasil\n" + 
+				"38015-000\n" + 
+				"Ms Maria da Rosa\n" + 
+				"Alameda da Terra Street, Number 548, S�o Jos� dos Campos, Brasil\n" + 
+				"12228-000\n" + 
+				"\n" + 
+				"Dear Ms Maria da Rosa\n" + 
+				"\n" + 
+				"Sincerely,\n" + 
+				"\n" + 
+				"\n" + 
+				"__________________\n" + 
+				"Mr Jos� da Silva\n" + 
+				"null\n" + 
+				"email:zedasilva@gmail.com";	
 		
-		//System.out.println(generatedString);
 		
-		//assertEquals(generatedString, hardCodedString);
+		assertEquals(generatedString, hardCodedString);
 	}
 	
 	@Test
@@ -89,11 +137,26 @@ public class exec03Tests {
 		builder_ = new LetterBuilder(comercialLetter_, idiom);
 		String generatedString = builder_.buildLetter();
 		
-		String hardCodedString = "";	
+		String hardCodedString = "16/10/2017\n" + 
+				"\n" + 
+				"Sr Jos� da Silva\n" + 
+				"Rua da Pedra, N�mero 12, Uberaba, Brasil\n" + 
+				"38015-000\n" + 
+				"Sra Maria da Rosa\n" + 
+				"Alameda da Terra, N�mero 548, S�o Jos� dos Campos, Brasil\n" + 
+				"12228-000\n" + 
+				"\n" + 
+				"Prezado(a) Sra Maria da Rosa\n" + 
+				"\n" + 
+				"Atenciosamente,\n" + 
+				"\n" + 
+				"\n" + 
+				"__________________\n" + 
+				"Sr Jos� da Silva\n" + 
+				"null\n" + 
+				"email:zedasilva@gmail.com";	
 		
-		//ystem.out.println(generatedString);
-		
-		//assertEquals(generatedString, hardCodedString);
+		assertEquals(generatedString, hardCodedString);
 	}
 	
 	@Test
@@ -104,11 +167,26 @@ public class exec03Tests {
 		builder_ = new LetterBuilder(readersNote_, idiom);
 		String generatedString = builder_.buildLetter();
 		
-		String hardCodedString = "";	
+		String hardCodedString = "16/10/2017\n" + 
+				"\n" + 
+				"Sr Jos� da Silva\n" + 
+				"Rua da Pedra, N�mero 12, Uberaba, Brasil\n" + 
+				"38015-000\n" + 
+				"Sra Maria da Rosa\n" + 
+				"Alameda da Terra, N�mero 548, S�o Jos� dos Campos, Brasil\n" + 
+				"12228-000\n" + 
+				"\n" + 
+				"Carta do Leitor\n" + 
+				"\n" + 
+				"Prezado Mr. Editorial Director, \n" + 
+				"\n" + 
+				"Cumprimentos,\n" + 
+				"\n" + 
+				"__________________\n" + 
+				"Sr Jos� da Silva";	
 		
-		System.out.println(generatedString);
 		
-		//assertEquals(generatedString, hardCodedString);
+		assertEquals(generatedString, hardCodedString);
 	}
 	
 	@Test
@@ -119,11 +197,26 @@ public class exec03Tests {
 		builder_ = new LetterBuilder(readersNote_, idiom);
 		String generatedString = builder_.buildLetter();
 		
-		String hardCodedString = "";	
+		String hardCodedString = "10/16/2017\n" + 
+				"\n" + 
+				"Mr Jos� da Silva\n" + 
+				"Rua da Pedra Street, Number 12, Uberaba, Brasil\n" + 
+				"38015-000\n" + 
+				"Ms Maria da Rosa\n" + 
+				"Alameda da Terra Street, Number 548, S�o Jos� dos Campos, Brasil\n" + 
+				"12228-000\n" + 
+				"\n" + 
+				"Reader's Note\n" + 
+				"\n" + 
+				"Dear Mr. Editorial Director, \n" + 
+				"\n" + 
+				"Best regards,\n" + 
+				"\n" + 
+				"__________________\n" + 
+				"Mr Jos� da Silva";	
 		
-		System.out.println(generatedString);
 		
-		//assertEquals(generatedString, hardCodedString);
+		assertEquals(generatedString, hardCodedString);
 	}
 
 }

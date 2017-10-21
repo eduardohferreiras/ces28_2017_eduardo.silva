@@ -22,7 +22,7 @@ public class PT_BRComercialLetter extends ComercialLetter {
 	}
 	
 	protected String signature() {
-			return "\n\n__________________\n" + sender_.name() + "\n" + sender_.phone().toPrint() +
+			return "\n\n__________________\n" + sender_.name() + "\n" + sender_.phone().getSpecificPhone("PT_BR").toPrint() +
 					"\nemail:" + sender_.email();
 	}
 

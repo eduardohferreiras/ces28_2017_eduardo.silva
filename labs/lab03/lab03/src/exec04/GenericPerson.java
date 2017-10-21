@@ -23,6 +23,10 @@ public class GenericPerson {
 		return phone_;
 	}
 
+	public void changePhone(GenericPhone phone) {
+		phone_ = phone;
+	}
+	
 	public String email() {
 		return email_;
 	}
