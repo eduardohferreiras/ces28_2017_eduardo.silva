@@ -13,7 +13,7 @@ import exec03.LoveLetter;
 import exec03.ReadersNote;
 
 public class exec04Tests {
-	/*private GenericDate date_;
+	private GenericDate date_;
 	
 	private GenericPerson sender_;
 	private GenericPerson destinatary_;
@@ -70,7 +70,7 @@ public class exec04Tests {
 		//System.out.println(generatedString);
 		
 		//assertEquals(generatedString, hardCodedString);
-	}*/
+	}
 	
 	private GenericDate _date;
 	

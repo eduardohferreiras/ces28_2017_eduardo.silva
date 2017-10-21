@@ -35,17 +35,17 @@ public class exec02Tests {
 	
 
 	@Test
-	public void JoséSendsALoveLettlerToMariaWithFieldsinEnglish() {
+	public void JoseSendsALoveLettlerToMariaWithFieldsinEnglish() {
 		String idiom = "EN_US";
 		date_ = dateFCT_.makeDate(16,10,2017, idiom);
 		
 		senderPhone_ = phoneFCT_.makePhone (34, 33333333,idiom);
 		destinataryPhone_ = phoneFCT_.makePhone(12, 999999999,idiom);
-		sender_ = personFCT_.makePerson("José da Silva", senderPhone_, "zedasilva@gmail.com", "M", idiom);
+		sender_ = personFCT_.makePerson("Josï¿½ da Silva", senderPhone_, "zedasilva@gmail.com", "M", idiom);
 		destinatary_ =  personFCT_.makePerson("Maria da Rosa", destinataryPhone_, "mariadarosa@outlook.com","F", idiom);
 		
 		addressSender_ = addressFCT_.makeAddress("Rua da Pedra", 12, "Uberaba", "Brasil", "38015-000", idiom);
-		addressDestiny_ = addressFCT_.makeAddress("Alameda da Terra", 548, "São José dos Campos", "Brasil", "12228-000", idiom);
+		addressDestiny_ = addressFCT_.makeAddress("Alameda da Terra", 548, "Sï¿½o Josï¿½ dos Campos", "Brasil", "12228-000", idiom);
 		
 		
 		LoveLetter loveLetter_ = new LoveLetter(sender_, destinatary_,addressSender_, addressDestiny_ ,date_);
@@ -54,12 +54,12 @@ public class exec02Tests {
 		
 		String hardCodedString = "10/16/2017\n" + 
 				"\n" + 
-				"Mr José da Silva\n" + 
+				"Mr Josï¿½ da Silva\n" + 
 				"Rua da Pedra Street, Number 12, Uberaba, Brasil\n" + 
 				"38015-000\n" + 
 				"\n" + 
 				"Ms Maria da Rosa\n" + 
-				"Alameda da Terra Street, Number 548, São José dos Campos, Brasil\n" + 
+				"Alameda da Terra Street, Number 548, Sï¿½o Josï¿½ dos Campos, Brasil\n" + 
 				"12228-000\n" + 
 				"\n" + 
 				"My lovely Ms Maria da Rosa,\n" + 
@@ -69,23 +69,23 @@ public class exec02Tests {
 				"\n" + 
 				"___________________\n" + 
 				"\n" + 
-				"Your lover, Mr José da Silva."	;	
+				"Your lover, Mr Josï¿½ da Silva."	;	
 		
 		assertEquals(generatedString, hardCodedString);
 	}
 
 	@Test
-	public void JoséSendsALoveLettlerToMariaWithSomeFieldsinPortuguese() {
+	public void JoseSendsALoveLettlerToMariaWithSomeFieldsinPortuguese() {
 		String idiom = "PT_BR";
 		date_ = dateFCT_.makeDate(16,10,2017, idiom);
 		
 		senderPhone_ = phoneFCT_.makePhone (34, 33333333,idiom);
 		destinataryPhone_ = phoneFCT_.makePhone(12, 999999999,idiom);
-		sender_ = personFCT_.makePerson("José da Silva", senderPhone_, "zedasilva@gmail.com", "M", idiom);
+		sender_ = personFCT_.makePerson("Josï¿½ da Silva", senderPhone_, "zedasilva@gmail.com", "M", idiom);
 		destinatary_ =  personFCT_.makePerson("Maria da Rosa", destinataryPhone_, "mariadarosa@outlook.com","F", idiom);
 		
 		addressSender_ = addressFCT_.makeAddress("Rua da Pedra", 12, "Uberaba", "Brasil", "38015-000", idiom);
-		addressDestiny_ = addressFCT_.makeAddress("Alameda da Terra", 548, "São José dos Campos", "Brasil", "12228-000", idiom);
+		addressDestiny_ = addressFCT_.makeAddress("Alameda da Terra", 548, "Sï¿½o Josï¿½ dos Campos", "Brasil", "12228-000", idiom);
 		
 		
 		LoveLetter loveLetter_ = new LoveLetter(sender_, destinatary_,addressSender_, addressDestiny_ ,date_);
@@ -94,12 +94,12 @@ public class exec02Tests {
 		
 		String hardCodedString = "16/10/2017\n" + 
 				"\n" + 
-				"Sr José da Silva\n" + 
-				"Rua da Pedra, Número 12, Uberaba, Brasil\n" + 
+				"Sr Josï¿½ da Silva\n" + 
+				"Rua da Pedra, Nï¿½mero 12, Uberaba, Brasil\n" + 
 				"38015-000\n" + 
 				"\n" + 
 				"Sra Maria da Rosa\n" + 
-				"Alameda da Terra, Número 548, São José dos Campos, Brasil\n" + 
+				"Alameda da Terra, Nï¿½mero 548, Sï¿½o Josï¿½ dos Campos, Brasil\n" + 
 				"12228-000\n" + 
 				"\n" + 
 				"My lovely Sra Maria da Rosa,\n" + 
@@ -109,7 +109,7 @@ public class exec02Tests {
 				"\n" + 
 				"___________________\n" + 
 				"\n" + 
-				"Your lover, Sr José da Silva.";
+				"Your lover, Sr Josï¿½ da Silva.";
 		
 		System.out.println(generatedString);
 		assertEquals(generatedString, hardCodedString);

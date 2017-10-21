@@ -7,7 +7,7 @@ public class PT_BRPhone1 extends GenericPhone {
 	}
 	
 	public String toPrint() {
-		return "(" + this.areaCode_ + ") " + this.number_;
+		return "DDD: " + this.areaCode_ + " Number: " + this.number_;
 	}
 
 }
