@@ -31,8 +31,6 @@ public class Presenter extends Observable{
     private final String CS_METHOD = "Cubic Spline";
     private final String L_METHOD = "Lagrange";
     private iView _dataSource;
-    
-    ///
     private HashMap<String,InterpolationMethod> availableMethods;
 
 	
@@ -41,8 +39,7 @@ public class Presenter extends Observable{
 		{
 			addObserver((Observer) view);
 		}
-		
-		//////
+
 		availableMethods = new HashMap<String,InterpolationMethod>();
 		availableMethods.put(CS_METHOD, new CubicSpline());
 		availableMethods.put(L_METHOD, new Lagrange());
