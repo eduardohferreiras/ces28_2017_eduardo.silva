@@ -34,7 +34,6 @@ public  class ConsoleView implements Observer,iView{
 	}
 	
 	
-	
     private void printResult() {
     	System.out.println("***********************");
     	System.out.println("DataFile: " + presenter.getUsedDataFile());
